@@ -4,12 +4,12 @@ import tw from "twrnc";
 import { SIZES, icons, images } from "../constants";
 import Text from "../components/Textcomp/Index";
 import { createNavigationContainerRef, useNavigation } from "@react-navigation/native";
-import { navigate } from "../navigations/rNavigation";
+import { navigate, navigationRef } from "../navigations/rNavigation";
 
 export default function Intro({navigation}:any) {
 //   const navigation = useNavigation();
 
-  const nav = (name: any, params: any) => {
+  const nav = (name: string, params: any) => {
     if (navigationRef.isReady()) {
       // Perform navigation if the react navigation is ready to handle actions
       navigationRef.navigate(name, params);

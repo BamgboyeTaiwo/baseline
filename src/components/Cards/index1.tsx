@@ -4,7 +4,13 @@ import tw from "twrnc";
 import { SIZES } from "../../constants/theme";
 import Text from "../Textcomp/Index";
 
-export default function Index1({ color, image, title, text }) {
+interface cardType {
+    text: string;
+    color: string;
+    image:any,
+    title: string
+  }
+export default function Index1({ color, image, title, text }:cardType) {
   return (
     <View style={[tw`p-4 px-6 flex flex-row items-center bg-[${color}]`, { width: SIZES.width * 0.48, height:SIZES.height * 0.1, borderRadius:10}]}>
       <Image

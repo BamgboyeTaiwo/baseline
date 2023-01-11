@@ -4,7 +4,12 @@ import tw from "twrnc";
 import { SIZES } from "../../constants/theme";
 import Text from "../Textcomp/Index";
 
-export default function Index2({ color, image, text }:any) {
+interface cardType {
+    text: string;
+    color: string;
+    image:any,
+  }
+export default function Index2({ color, image, text }:cardType) {
   return (
     <View style={[tw`p-4 justify-center items-center  bg-[${color}]`, { width: SIZES.width * 0.26, height:SIZES.height * 0.1, borderRadius:10}]}>
       <Image

@@ -72,8 +72,9 @@ export default function Productpage({ navigation }: any) {
                       image={images.featuresimg1}
                       title={"Lorem Ipsumusa dare"}
                       location={"Surulere"}
-                      rent={"₦700,000"}
-                      tp={"₦700,000"}
+                      rent={700000}
+                      tp={700000}
+                      text={''}
                     />
                   </View>
                 );
@@ -93,8 +94,9 @@ export default function Productpage({ navigation }: any) {
                       image={images.featuresimg1}
                       title={"Lorem Ipsumusa dare"}
                       location={"Surulere"}
-                      rent={"₦700,000"}
-                      tp={"₦700,000"}
+                      rent={700000}
+                      tp={700000}
+                      text={''}
                     />
                   </View>
                 );
@@ -113,17 +115,18 @@ export default function Productpage({ navigation }: any) {
             <ScrollView style={tw` mt-4`} horizontal showsHorizontalScrollIndicator={false}>
               {dummy.featuresList2.map((items, index) => {
                 return (
-                  <View style={tw`${index === 0 ? "mr-2" : "mx-2"}`}>
+                  <View key={index} style={tw`${index === 0 ? "mr-2" : "mx-2"}`}>
                     <Featurescomp2
-                      key={index}
                       color={"#F1A5C2"}
                       image={items.image}
                       title={"Lorem Ipsumusa dare"}
                       location={"Surulere"}
-                      tp={"₦700,000"}
+                      tp={700000}
                       taken={items.taken}
                       available={items.available}
                       interest={items.interest}
+                      text={''}
+                      rent={200}
                     />
                   </View>
                 );
