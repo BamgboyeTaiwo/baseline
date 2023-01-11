@@ -1,7 +1,7 @@
 import { View, SafeAreaView, Image, TouchableOpacity } from "react-native";
 import React, { useRef } from "react";
 import tw from "twrnc";
-import { SIZES, icons } from "../constants";
+import { SIZES, icons, images } from "../constants";
 import Text from "../components/Textcomp/Index";
 import { createNavigationContainerRef, useNavigation } from "@react-navigation/native";
 import { navigate } from "../navigations/rNavigation";
@@ -32,7 +32,7 @@ export default function Intro({navigation}:any) {
         </View>
 
         <View style={[tw`mx-auto`, { marginTop: SIZES.height * 0.05 }]}>
-          <Image source={icons.logo} style={{ width: SIZES.width * 0.88, height: SIZES.height * 0.3 }} />
+          <Image source={images.intro_img} style={{ width: SIZES.width * 0.88, height: SIZES.height * 0.3 }} />
         </View>
 
         <View style={[tw`mx-auto mt-4`, { marginTop: SIZES.height * 0.05 }]}>

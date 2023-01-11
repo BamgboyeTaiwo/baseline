@@ -12,7 +12,7 @@ export default function RootNav() {
   const navigationRef = useRef(null);
   return (
     <>
-      {!loggedIn ? (
+      {loggedIn ? (
         <>
           <NavigationContainer ref={navigationRef}>
             <Intro />
